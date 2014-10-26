@@ -5,7 +5,7 @@
     <td><%= event.Employer %></td>
     <td><%= event.Position %></td>
     <td><%= event.Compensation %></td>
-    <td><%= link_to 'Show', event_path(event) %></td>
+    <td><%= link_to 'Show', event_path(event) %><%= link_to " (XML)", event_path(event, :format => :xml) %><%= link_to " (JSON)", event_path(event, :format => :json) %></td>
     <td><%= link_to 'Edit', edit_event_path(event) %></td>
     <td><%= link_to 'Delete', event_path(event), :method => :delete %></td>
   </tr>
@@ -13,4 +13,5 @@
 </table>
 
 <%= link_to 'New Event', new_event_path %>
+<%= link_to "Atom feed", events_path(:format => :atom) %>
 <%= paginate @events %>
