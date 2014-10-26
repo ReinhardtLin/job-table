@@ -2,6 +2,7 @@ class EventsController < ApplicationController
   before_action :set_event, :only => [:show, :edit, :update, :destroy]
   def index
     @events = Event.all
+    @events = Event.page(params[:page]).per(5)
   end
 
   def new
@@ -12,6 +13,7 @@ class EventsController < ApplicationController
     @event = Event.new(event_params)
     if @event.save
       redirect_to :action => :index
+      flash[:notice] = "event was successfully created"
     else
       render :action => :new
     end
@@ -27,6 +29,7 @@ class EventsController < ApplicationController
   def update
     if @event.update_attributes(event_params)
       redirect_to :action => :show, :id => @event
+      flash[:notice] = "event was successfully updated"
     else
       render :action => :edit
     end
@@ -35,6 +38,7 @@ class EventsController < ApplicationController
   def destroy
     @event.destroy
     redirect_to :action => :index
+    flash[:notice] = "event was successfully deleted"
   end
 
   private
