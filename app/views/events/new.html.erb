@@ -1,18 +1,4 @@
 <%= form_for @event, :url => { :controller => 'events', :action => 'create' } do |f| %>
-    <%= f.label :Job_ID, "Job ID" %>
-    <%= f.text_field :Job_ID %>
-
-    <%= f.label :Employer, "Employer" %>
-    <%= f.text_area :Employer %>
-
-    <%= f.label :Position, "Position" %>
-    <%= f.text_area :Position %>
-
-    <%= f.label :Compensation, "Compensation" %>
-    <%= f.text_field :Compensation %>
-
-    <%= f.label :Content, "Content" %>
-    <%= f.text_area :Content %>
-
+    <%= render :partial => 'form', :locals => { :f => f } %>
     <%= f.submit "Create" %>
 <% end %>
