@@ -1,0 +1,7 @@
+<%= @event.Job_ID %>
+<%= simple_format(@event.Employer) %>
+<%= simple_format(@event.Position) %>
+<%= @event.Compensation %>
+<%= simple_format(@event.Content) %>
+
+<p><%= link_to 'Back to index', :controller => 'events', :action => 'index' %></p>

@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  Job_ID: MyString
+  Employer: MyText
+  Position: MyText
+  Compensation: MyString
+  Content: MyText
+  is_public: false
+  capacity: 1
+
+two:
+  Job_ID: MyString
+  Employer: MyText
+  Position: MyText
+  Compensation: MyString
+  Content: MyText
+  is_public: false
+  capacity: 1
