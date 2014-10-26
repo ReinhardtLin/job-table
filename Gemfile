@@ -7,6 +7,7 @@ gem 'rails', '4.1.6'
 # gem 'sqlite3'
 gem 'pg'
 gem 'rails_12factor', group: :production
+gem 'mysql2'
 gem "kaminari"
 
 # Use SCSS for stylesheets
