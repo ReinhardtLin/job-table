@@ -30,9 +30,9 @@ class EventsController < ApplicationController
     @page_title = @event.Job_ID
 
     respond_to do |format|
-      format.html { @page_title = @event.name } # show.html.erb
+      format.html { @page_title = @event.Job_ID } # show.html.erb
       format.xml # show.xml.builder
-      format.json { render :json => { id: @event.id, name: @event.name }.to_json }
+      format.json { render :json => { id: @event.id, Job_ID: @event.Job_ID }.to_json }
     end
   end
 
